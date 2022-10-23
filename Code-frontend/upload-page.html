@@ -1,0 +1,31 @@
+<!--Basic video upload form-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Axios Post Request to Send Text & Image</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+  <h1>Video Upload to Azure blob storage</h1>
+    <form id="form">
+        <label for="videfile">Select a video: </label>
+        <input type="file" id="videofile" name="file" accept="video/*"><br><br>
+        <button type="submit">Submit</button>
+      </form>
+</body>
+<script>
+  const form = document.querySelector("form");
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+    console.log([...formData]);
+    axios.post('YOUR FUCTION URL', formData)
+      .then(res => console.log(res))
+      .catch(err => console.log(err))
+  });
+</script>
+</html>
