@@ -1,6 +1,15 @@
 # azure-video-to-blob-storage-function
 Tutorial on how to upload videos to Azure blob storage using a HTTP trigger function with Node.js runtime stack.
 
+### Table Of Contents
+- [Prerequisites](#prerequisites)
+- [Create Storage Account And Container](#create-storage-account-and-container)
+- [Create Function App and Function](#create-function-app-and-function)
+- [Install Packages Needed For The Function](#install-packages-needed-for-the-function)
+- [Configure Storage Connection String](#configure-storage-connection-string)
+- [Code Configuration](#code-configuration)
+- [Check For The Uploaded Video](#check-for-the-uploaded-video)
+
 ## Prerequisites
 - An Azure account with an active subscription
 - A [resource group](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/manage-resource-groups-portal) - A container that holds related resources for an Azure solution
@@ -101,7 +110,7 @@ To make the function to upload videos to the blob storage, the code needs to be 
 9. Open the file in your browser now
 10. Select the video you want to upload in the form and click on the submit button
 
-## Check for the uploaded video
+## Check For The Uploaded Video
 1. Navigate to the storage account resource
 2. Click on `Blob Service` (Alternative `Container` on the navigation panel)
 3. Click on your created storage container
